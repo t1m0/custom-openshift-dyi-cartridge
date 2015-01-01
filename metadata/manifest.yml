@@ -57,7 +57,7 @@ Endpoints:
       health: true
   - Private-IP-Name:  IP
     Private-Port-Name: AMQ_PORT
-    Private-Port:      16000
+    Private-Port: 16000
     Public-Port-Name: PROXY_AMQ_PORT
     Protocols:
     - http
