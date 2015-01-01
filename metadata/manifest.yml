@@ -1,6 +1,6 @@
 ---
-Name: diy_custom
-Cartridge-Short-Name: DIY_CUSTOM
+Name: diy
+Cartridge-Short-Name: DIY
 Display-Name: Do-It-Yourself 0.1
 Description: The Do-It-Yourself (DIY) application type is a blank slate for trying
   unsupported languages, frameworks, and middleware on OpenShift. See the community
