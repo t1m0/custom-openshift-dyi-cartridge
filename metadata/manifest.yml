@@ -1,6 +1,6 @@
 ---
-Name: diy
-Cartridge-Short-Name: DIY
+Name: diy_custom
+Cartridge-Short-Name: DIY_CUSTOM
 Display-Name: Do-It-Yourself 0.1
 Description: The Do-It-Yourself (DIY) application type is a blank slate for trying
   unsupported languages, frameworks, and middleware on OpenShift. See the community
@@ -9,13 +9,12 @@ Version: '0.1'
 License: ASL 2.0
 License-Url: http://www.apache.org/licenses/LICENSE-2.0.txt
 Cartridge-Version: 0.0.13
-Source-Url: https://github.com/openshift-cartridges/openshift-diy-cartridge.git
 Compatible-Versions:
 - 0.0.10
 - 0.0.11
 - 0.0.12
-Cartridge-Vendor: t1m0
-Vendor: t1m0
+Cartridge-Vendor: redhat
+Vendor: redhat
 Categories:
 - web_framework
 - experimental
@@ -55,20 +54,21 @@ Endpoints:
     Backend: ''
     Options:
       health: true
-  - Private-IP-Name:  IP
-    Private-Port-Name: AMQ_PORT
-    Private-Port: 16000
-    Public-Port-Name: PROXY_AMQ_PORT
-    Protocols:
-    - http
-    - ws
-    - tcp
-    Mappings:
-    - Frontend: ''
+- Private-IP-Name: IP
+  Private-Port-Name: AMQ_PORT
+  Private-Port: 16000
+  Public-Port-Name: AMQ_PROXY_PORT
+  Protocols:
+  - http
+  - ws
+  Options:
+    primary: true
+  Mappings:
+  - Frontend: ''
     Backend: ''
     Options:
       websocket: true
   - Frontend: "/health"
     Backend: ''
     Options:
-      health: true
+      health: true 
