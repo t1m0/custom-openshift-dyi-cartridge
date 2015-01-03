@@ -61,7 +61,6 @@ Endpoints:
   Public-Port-Name: AMQ_PROXY_PORT
   Protocols:
   - tcp
-  - http
   - ws
   Options:
     primary: false
