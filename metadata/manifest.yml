@@ -60,10 +60,11 @@ Endpoints:
   Private-Port: 16000
   Public-Port-Name: AMQ_PROXY_PORT
   Protocols:
+  - tcp
   - http
   - ws
   Options:
-    primary: true
+    primary: false
   Mappings:
   - Frontend: ''
     Backend: ''
